@@ -8,3 +8,4 @@
 
 Element.create(:name => 'Freshdesk', :authentication_type => 1)
 Element.create(:name => 'Jira', :authentication_type => 1)
+Extension.create(:name => "FD_JIRA_APP", :product_id => 1, :account_id => 0, :source_element_id => 1, :destination_element_id => 2)
