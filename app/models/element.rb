@@ -6,4 +6,6 @@ class Element < ActiveRecord::Base
     [:oauth1, "OAuth1", 2],
     [:oauth2, "OAuth2", 3]
   ]
+
+  serialize :configs, Hash
 end
