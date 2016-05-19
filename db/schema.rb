@@ -14,18 +14,39 @@
 ActiveRecord::Schema.define(version: 20160519083432) do
 
   create_table "extensions", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "product_id"
+    t.integer  "account_id"
+    t.integer  "source_element_id"
+    t.integer  "destination_element_id"
+    t.text     "options"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "installed_extensions", force: :cascade do |t|
+    t.integer  "extension_id"
+    t.integer  "product_id"
+    t.integer  "account_id"
+    t.text     "configs"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "linked_resources", force: :cascade do |t|
+    t.integer  "installed_extension_id"
+    t.string   "source_integratable_id"
+    t.string   "source_integratable_type"
+    t.integer  "remote_integratable_id"
+    t.string   "remote_integratable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "elements", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer "authentication_type"
+    t.text     "configs"
   end
 
 end
