@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Element.create(:name => 'Freshdesk', :authentication_type => 1)
+Element.create(:name => 'Jira', :authentication_type => 1)
