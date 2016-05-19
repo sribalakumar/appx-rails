@@ -9,3 +9,4 @@
 Element.create(:name => 'Freshdesk', :authentication_type => 1)
 Element.create(:name => 'Jira', :authentication_type => 1)
 Extension.create(:name => "FD_JIRA_APP", :product_id => 1, :account_id => 0, :source_element_id => 1, :destination_element_id => 2)
+InstalledExtension.create(:extension_id => 1, :product_id => 1, :account_id => 12343, :source_configs => {"username" => "balafreshdesk", "password" => "password"}, :dest_configs => {"jira_user_name" => "freshdesktest", "password" => "test"})
