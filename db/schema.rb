@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20160519083432) do
     t.integer  "product_id"
     t.integer  "account_id"
     t.text     "configs"
+    t.text     "source_configs"
+    t.text     "dest_configs"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,7 +39,7 @@ ActiveRecord::Schema.define(version: 20160519083432) do
     t.integer  "installed_extension_id"
     t.string   "source_integratable_id"
     t.string   "source_integratable_type"
-    t.integer  "remote_integratable_id"
+    t.string  "remote_integratable_id"
     t.string   "remote_integratable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
